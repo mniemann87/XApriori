@@ -1,0 +1,38 @@
+# Template Description file for a Weka package
+# 
+
+# Package name (required)
+PackageName=XApriori
+
+# Version (required)
+Version=0.1
+
+#Date (year-month-day)
+Date=2013-10-07
+
+# Title (required)
+Title=XApriori frequent pattern mining
+
+# Category (recommended)
+Category=Associations
+
+# Author (required)
+Author=Matthias Niemann <mail@mniemann.de>
+
+# Maintainer (required)
+Author=Matthias Niemann <mail@mniemann.de>
+
+# License (required)
+License=GPL 2.0
+
+# Description (required)
+Description=The XApriori algorithm generates associations in the presence of missing values.
+
+# Package URL for obtaining the package archive (required)
+PackageURL=http://weka.mniemann.de/xap1.0.0.zip
+
+# URL for further information
+URL=http://weka.mniemann.de
+
+# Dependencies (format: packageName (equality/inequality version_number)
+Depends=weka (>=3.7.1)
