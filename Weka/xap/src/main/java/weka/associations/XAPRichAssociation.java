@@ -42,7 +42,7 @@ public class XAPRichAssociation<T extends Missable> extends Association<T> {
 
 	@Override
 	public String toString() {
-		return antedecent + " ==> " + consequent + "   " + interestingness;
+		return antecedent + " ==> " + consequent + "   " + interestingness;
 	}
 
 	

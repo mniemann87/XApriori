@@ -114,6 +114,7 @@ public class XAPriori extends AbstractAssociator implements OptionHandler,
 		System.out.println("found: " + xap.getPatternData().size() + " checked: " + xap.getChecked() + " pruned: " + xap.getPruned() + " discarded: " + xap.getDiscarded());
 		patternData = xap.getPatternData();
 		
+		System.out.println(patternData);
 		//generate associations
 		XAPrioriAssociationProducer xapap = new XAPrioriAssociationProducer(transactions, patternData, m_minConfidence, 4);
 		associations = xapap.getAssociations();
@@ -176,7 +177,7 @@ public class XAPriori extends AbstractAssociator implements OptionHandler,
 				Collection<Item> premise = new ArrayList<Item>();
 				Collection<Item> consequence = new ArrayList<Item>();
 				try{
-					for (Missable item : currentAssociation.getAntedecent()){
+					for (Missable item : currentAssociation.getAntecedent()){
 						XAPNominalMissable nm = (XAPNominalMissable) item;
 						Item newFamily = new NominalItem(instances.attribute(colFamily), (int)nm.getFamily());
 						premise.add(newFamily);
@@ -361,7 +362,7 @@ public class XAPriori extends AbstractAssociator implements OptionHandler,
 		text.append("\n");
 		for (XAPRichAssociation<Missable> ra  : associations){
 			String antedecent = "", consequence = "";
-			for (Missable missable : ra.getAntedecent()){
+			for (Missable missable : ra.getAntecedent()){
 				XAPNominalMissable nm = (XAPNominalMissable) missable;
 				antedecent += (instances.attribute(colFamily).value((int)nm.getFamily()) + "=" + instances.attribute(colValue).value((int)nm.getValue()) + ", ");
 			}
