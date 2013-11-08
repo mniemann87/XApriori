@@ -243,7 +243,7 @@ public class XAPriori extends AbstractAssociator implements OptionHandler,
 		String representativityString = Utils.getOption('R', options); 
 		String confidenceString = Utils.getOption('C', options);
 		String maxPatternSizeString = Utils.getOption('P', options);
-		String matrixString = Utils.getOption('M', options);
+//		String matrixString = Utils.getOption('M', options);
 		String columnString = Utils.getOption('I', options);
 		String datatypeString = Utils.getOption('T', options);
 		String dataString = Utils.getOption('D', options);
